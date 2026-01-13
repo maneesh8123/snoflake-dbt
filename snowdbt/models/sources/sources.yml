@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: staging # name should be same as schema name
+    database: sdbt  # catalog name
+    schema: staging  # schema name
+    tables:
+      - name: bookings
+      - name: listings
+      - name: hosts
+
+
+# sources:
+#   - name: source
+#     # database: dbtsnf  # catalog name
+#     database: '{{ target.catalog }}'  # catalog name
+#     schema: source  # schema name
+#     tables:
+#       - name: dim_customer
+#       - name: fact_sales
+#       - name: items
