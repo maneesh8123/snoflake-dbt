@@ -1,0 +1,67 @@
+      snowflake + dbt
+=============================
+
+important to learn concept 
+=================================
+Data Lake = aws S3
+Metadata Driven Pipeline
+Snowflake =
+snowflake stage
+
+===============
+snowflake is a cloud data warehouse(olap) 
+
+==> S3 is the Data lake in AWS
+
+DBT 
+===========
+Modularization
+
+Tech stack
+===========
+s3 data lake snowflake dbt GitHub
+
+Environment Setup
+===================
+search aws account -> create account -> account name -'snf'
+pwd = m4E_tk_+9r;z_Q<
+
+snowflake account
+username = Rahul123
+yXdLVhDNC6H8pSv
+
+Create S3 bucket
+
+three bars = all services -> in storage click s3 ->create new bucket - name,
+-> create bucket => can upload data directly to the bucket
+
+best way - create containers(or folders)
+create folder -> folder name source ->create folder
+
+uploading data 
+============
+just drop the files then click to upload
+
+=======================
+load the data to snowflake from aws
+
+got to catalog on the left side = > create a database
+create a schema named as schema = (create table => from file)
+
+create a table = > standard -> 
+ddl =https://github.com/anshlambagit/Airbnb_Snowflake_DBT_Data_Engineer_Project/tree/main/DDL
+
+
+
+
+
+
+===================
+
+snowflake db = sdbt
+schema - staging
+
+
+
+
+
