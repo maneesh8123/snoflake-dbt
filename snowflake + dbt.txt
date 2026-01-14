@@ -1,5 +1,6 @@
       snowflake + dbt
 =============================
+dbt = iniline level , model level , project.yml level configuration
 
 important to learn concept 
 =================================
@@ -7,6 +8,9 @@ Data Lake = aws S3
 Metadata Driven Pipeline
 Snowflake =
 snowflake stage
+jinja 
+macro
+run : dbt compile
 
 ===============
 snowflake is a cloud data warehouse(olap) 
@@ -60,6 +64,61 @@ ddl =https://github.com/anshlambagit/Airbnb_Snowflake_DBT_Data_Engineer_Project/
 
 snowflake db = sdbt
 schema - staging
+
+upload data 
+
+Catalog -> Create Database -> Create schema ->create table -> from file -> Browse file
+
+dbt with snowflake installation
+=====================================
+python -m pip install dbt-core dbt-snowflake
+git config --global --list
+git init
+git status
+git branch -m main
+
+git switch -c core
+
+dbt init snowbt
+1
+account -> ACCOUNTADMIN -> Account aws -> view account details -> account identifier
+username :Rahul123
+pwd : yXdLVhDNC6H8pSv
+role - ACCOUNTADMIN(ACCOUNTADMIN -> Account aws -> view account details -> Role)
+ware house - > project (default - compute_wh)
+database 
+schema
+threads                     
+dbt debug      
+
+============
+project.yml
+models:
+  snowdbt:
+    # Config indicated by + and applies to all files under models/example/
+    bronze:
+      +materialized: view
+      schema: bronze
+
+this same thing we can do in by creatgin a properties.yml file in each folder such as 
+bronze, silver , gold each having its own and configuration will be like this
+
+models:
+
+  - name: model_name1
+    config:
+	materialized: view
+  - name: model_name2
+    config:
+	materialized: view
+use case : can customize model by model(in bornze layer some should be view ,some 
+should be table or any kind)
+
+============================================
+
+Metadata driven pipeline
+
+
 
 
 
