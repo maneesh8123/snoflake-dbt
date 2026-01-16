@@ -3,7 +3,7 @@
 
 SELECT
     *
-FROM {{ source('staging', 'listings') }}
+FROM {{ source('source', 'listings') }}
 {% if is_incremental() %}
     WHERE CREATED_AT > (SELECT COALESCE(MAX(CREATED_AT), '1900-01-01') FROM {{ this }})
 {% endif %}

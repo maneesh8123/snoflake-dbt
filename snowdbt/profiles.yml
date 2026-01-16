@@ -1,13 +1,13 @@
 snowdbt:
   outputs:
     dev:
-      account: BTYQGLQ-WR38891
-      database: sdbt
-      password: yXdLVhDNC6H8pSv
+      account: FFSXKZG-WZ34394
+      database: snowdbt
+      password: rzBSDe6zfkuzRnp
       role: ACCOUNTADMIN
-      schema: staging
+      schema: source
       threads: 8
       type: snowflake
-      user: Rahul123
+      user: maneeshsnf
       warehouse: COMPUTE_WH
   target: dev
